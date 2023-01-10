@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-geral{
+    width: 100vw;
+    height: 100vh;
+    background-color: #210518;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.formulario{
+    width: 25%;
+    height: 50%;
+    background-color: #93bd9a;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+.form-1 fieldset{
+    height: 25%;
+}
+.form-1 input{
+    height: 40%;
+}
+.form-1 input:focus{
+    height: 41%;
+}
+.form-2 fieldset{
+    height: 25%;
+}
+.form-2 input{
+    height: 41%;
+}
+.form-2 input:focus{
+    height: 43%;
+}
+fieldset{
+    width: 100%;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width: 80%;
+    height: 50%;
+    border-color: transparent;
+    border-radius: 20px;
+    padding-left: 1.9%;
+    padding-right: 2%;;
+    font-size: 1.2rem;
+    background-color: #ccc;
+}
+input:focus{
+    background-color: #fff;
+    outline: none;
+    transition: all .2s;
+} 
+
+label{
+    align-self: flex-start;
+    margin-left: 10%;
+}
+form{
+    height: 100%;
+}
+button{
+    width: 35%;
+    height: 40%;
+    background-color: #5e4b55;
+    color: white;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 20px;;
+}
+button:hover{
+    cursor: pointer;
+}
+.error{
+    border: 2px solid red;
+}

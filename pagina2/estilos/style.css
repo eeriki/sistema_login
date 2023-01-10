@@ -1,0 +1,155 @@
+@font-face {
+    font-family: emo;
+    src: url('../fontes/emos.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --fonte: emo;
+    --cor: #bc63db;
+    --back: #472350;
+    --act: #932d8c;
+}
+
+body{
+    position: relative;
+    height: 100vh;
+    font-family: var(--fonte);
+    background: var(--back);
+    font-size: larger;
+}
+
+header{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1{
+    
+    font-size: 2.5em;
+    color: rgba(200, 200, 200, .7);
+}
+
+hr{
+    width: 95%;
+    height:1px;
+    margin: 3vh auto;
+}
+
+main{
+    position: relatve;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    width:100%;
+    height: 80%;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    height: 100%;
+    
+}
+
+.area-buttons{
+    position:absolute;
+    width: 70%;
+    height: 20%;
+    
+}
+.area-buttons .buttons-img{
+    display: flex;
+    width: 100%;
+    height: 45%;
+    
+    justify-content: space-evenly;
+}
+
+.area-buttons .input-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.3%;
+    height: 45%;
+   
+}
+
+button.butts{
+    font-family: emo;
+    font-size: 1.2em;
+    color: white;
+    border: none;
+    background: var(--cor);
+    border-radius: 25px;
+    width: 15%;
+    height: 100%;
+}
+
+
+label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: emo;
+    font-size: 1.2em;
+    color: white;
+    border: none;
+    background: var(--cor);
+    border-radius: 25px;
+    width: 30%;
+    height: 100%;
+}
+
+input{
+    display: none;
+}
+
+.butts:hover, .butts.active{
+    background-color: var(--act);
+}
+
+.img-emo{
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 75%;
+   
+}
+
+.img-emo .imagem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 100%;
+    background-color: var(--cor);
+    
+    border-radius: 30px;
+}
+
+
+
+.imagem img{
+   width: 90%;
+   height: 90%;
+   border: 30px solid var(--back);
+   border-radius: 20px;
+   justify-self: center;
+   
+   
+}
+

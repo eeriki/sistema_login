@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="shortcut icon" href="static/images/caveirabememo.ico">
+    <title>Página de EMOS</title>
+</head>
+<body>
+    <header>
+        <h1>ESCOLHA SEU EMO</h1> 
+    </header>
+    <hr>
+    <main>
+        <div class="container">
+            <div class="area-buttons">
+                <div class="buttons-img">
+                   <button class="butts active">EMO 1</button>
+                   <button class="butts">EMO 2</button>
+                   <button class="butts">EMO 3</button>
+                   <button class="butts">EMO 4</button>
+                   <button class="butts">EM0 5</button>
+                </div>
+                <div class="input-img">
+                    <label class="butts">
+                        <input type="file" accept="image/*" class="archive">
+                        <span>+</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="img-emo">
+                <div class="imagem">
+                    <img src="static/images/emoboy.jpg" alt="aqui jás um emo" id="emos">
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        var imagem = document.querySelector('#emos')
+const list = ['/emoboy.jpg', '/emoemoemo.jpg', '/felipometo.jpg', '/minionboy.jpg', '/minionemo.jpg']
+var entrada = document.querySelector('.archive')
+
+const botList = document.querySelectorAll('.butts')
+
+function ativar(){
+    botList.forEach((item, index)=>{
+        item.classList.remove("active")
+        this.classList.add("active")
+        if(item.classList.contains('active')){
+            
+            
+             if(index == 5){
+                entrada.addEventListener('change', (e)=>{
+                    const input = e.target
+                    const arqui = input.files[0]
+                    if(arqui){
+                        const leitor = new FileReader()
+                        leitor.addEventListener('load', (e)=>{
+                            const arquivo_lido = e.target
+                
+                            imagem.src = arquivo_lido.result
+                        })
+                        leitor.readAsDataURL(arqui)
+                    }
+                })
+            }else{
+                imagem.src = 'static/images' + list[index]
+            }
+        }
+    })
+}
+
+botList.forEach((item)=>{
+    item.addEventListener('click', ativar)
+})
+
+
+
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
