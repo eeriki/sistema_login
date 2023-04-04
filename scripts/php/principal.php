@@ -1,6 +1,6 @@
 <?php
 
-$conexao = new mysqli('localhost', 'erkg5', '1113836246', 'cadastro', 3306);
+$conexao = new mysqli('localhost', 'user', 'password', 'dbname', port);
 
 function searchNicks($array, $target){    
     foreach($array as $nickname){
